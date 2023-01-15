@@ -10,5 +10,5 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [https://github.com/GaelXoconoxtle/2-JUNIOR-intro-section-with-dropdown-navigation-main](https://github.com/GaelXoconoxtle/2-JUNIOR-intro-section-with-dropdown-navigation-main)
-- Live Site URL: [https://comforting-genie-59d195.netlify.app/](https://comforting-genie-59d195.netlify.app/)
+- Solution URL: [https://github.com/GaelXoconoxtle/2-JUNIOR-tip-calculator-app-main-by-GaelXoconoxtle](https://github.com/GaelXoconoxtle/2-JUNIOR-tip-calculator-app-main-by-GaelXoconoxtle)
+- Live Site URL: [https://tip-calculator-app-gaelxoconoxtle.netlify.app/](https://tip-calculator-app-gaelxoconoxtle.netlify.app/)
