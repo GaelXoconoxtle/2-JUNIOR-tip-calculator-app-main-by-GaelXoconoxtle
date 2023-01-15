@@ -1,15 +1,20 @@
-// 640px, 1024px, 1400px
+// 640px, 780px, 1024px, 1400px
 $breakpoints-up: (
   'medium': '40em',
+  'mediumLarge': '48.75em',
   'large': '64em',
   'xlarge': '87.5em',
+  //HACER MEDIA QUERIES
 );
 
-// 639px, 1023px, 1399px
+// 639px, 779px, 1023px, 1399px
 $breakpoints-down : (
   'medium': '39.9375em',
+  'mediumLarge': '48.6875em',
   'large': '63.9375em',
   'xlarge': '87.4375em',
+  //HACER MEDIA QUERIEEEES y AQUI NOS QUEDAMOS
+  //Hacer la versión vertical
 );
 
 @mixin breakpoint-up($size) {

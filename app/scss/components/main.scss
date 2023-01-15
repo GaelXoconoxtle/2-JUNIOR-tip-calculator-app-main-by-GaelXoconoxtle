@@ -1,2 +1,351 @@
 @use '../util/' as u;
 
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include u.breakpoint-down(mediumLarge) {
+    height: auto;
+    padding-top: u.rem(40);
+  }
+
+  h1 {
+    font-size: u.rem(24);
+    color: u.$very-dark-cyan;
+    overflow-wrap: break-word;
+    width: u.rem(100);
+    letter-spacing: u.rem(10);
+    line-height: 1.5;
+    margin-bottom: u.rem(78);
+    margin-left: u.rem(8);
+
+    @include u.breakpoint-down(xlarge) {
+      font-size: u.rem(18);
+      margin-bottom: u.rem(60);
+    }
+
+    @include u.breakpoint-down(mediumLarge) {
+      margin-left: 0;   
+      font-size: u.rem(24);
+      margin-left: u.rem(8);
+      margin-bottom: u.rem(30);
+    }
+  }
+
+  .container {
+    background-color: u.$white;
+    padding: u.rem(36) u.rem(38) u.rem(36) u.rem(48);
+    display: flex;
+    width: u.rem(925);
+    margin-bottom: u.rem(60);
+    border-radius: u.rem(22);
+    column-gap: u.rem(20);
+
+    @include u.breakpoint-down(xlarge) {
+      padding: u.rem(28) u.rem(29) u.rem(28) u.rem(37);
+      width: u.rem(712);
+      margin-bottom: u.rem(46);
+      column-gap: u.rem(15);
+    }
+
+    @include u.breakpoint-down(mediumLarge) {
+      flex-direction: column;
+      width: 80%;
+      padding: u.rem(26);
+    }
+
+    @include u.breakpoint-down(medium) {
+      width: 100%;
+    }
+
+    &__left {
+      flex: 1;
+      margin-top: u.rem(10);
+
+      @include u.breakpoint-down(xlarge) {
+        margin-top: u.rem(8);
+      }
+
+      @include u.breakpoint-down(mediumLarge) {
+        margin-top: 0;
+      }
+
+      &-2 {
+        padding-right: u.rem(30);
+
+        @include u.breakpoint-down(xlarge) {
+          padding-right: u.rem(23);
+        }
+
+        @include u.breakpoint-down(mediumLarge) {
+          padding-right: 0;
+        }
+
+        .input {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          margin-bottom: u.rem(40);
+
+          @include u.breakpoint-down(xlarge) {
+            margin-bottom: u.rem(31);
+
+            &:not(:first-child) {
+              margin-bottom: u.rem(11);
+            }
+          }
+
+          @include u.breakpoint-down(mediumLarge) {
+            margin-bottom: u.rem(28) !important;
+
+          }
+
+          &:not(:first-child) {
+            margin-bottom: u.rem(14);
+          }
+
+          &.error {
+            input {
+              border: 1px solid red;
+            }
+          }
+  
+          &__label {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: u.rem(8);
+
+            @include u.breakpoint-down(xlarge) {
+              margin-bottom: u.rem(6);
+            }
+            
+            label {
+              font-size: u.rem(16);
+              color: u.$dark-grayish-cyan;
+
+              @include u.breakpoint-down(xlarge) {
+                font-size: u.rem(12);
+              }
+            }
+  
+            small {
+              font-size: u.rem(13);
+              color: u.$error;
+
+              @include u.breakpoint-down(xlarge) {
+                font-size: u.rem(10);
+              }
+            }
+          }
+  
+          i {
+            background-image: url("/images/icon-dollar.svg");
+            width: u.rem(11);
+            height: u.rem(17);
+            position: absolute;
+            top: u.rem(47);
+            left: u.rem(16);
+
+            @include u.breakpoint-down(xlarge) {
+              width: u.rem(8);
+              height: u.rem(13);
+              background-size: contain;
+              top: u.rem(36);
+              left: u.rem(12);
+            }
+          }
+  
+          input {
+            text-align: right;
+            padding: u.rem(6) u.rem(16) u.rem(6) u.rem(36);
+            width: 100%;
+
+            @include u.breakpoint-down(xlarge) {
+              padding: u.rem(5) u.rem(12) u.rem(5) u.rem(28);
+            }
+          }
+        }
+  
+        .select-Tip {
+          margin-bottom: u.rem(40);
+
+          @include u.breakpoint-down(xlarge) {
+            margin-bottom: u.rem(31);
+          }
+          
+          p {
+            font-size: u.rem(16);
+            color: u.$dark-grayish-cyan;
+            margin-bottom: u.rem(14);
+
+            @include u.breakpoint-down(xlarge) {
+              font-size: u.rem(12);
+              margin-bottom: u.rem(11);
+            }
+          }
+  
+          &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: u.rem(12);
+            row-gap: u.rem(16);
+
+            @include u.breakpoint-down(xlarge) {
+              gap: u.rem(9);
+              row-gap: u.rem(12);
+            }
+
+            @include u.breakpoint-down(medium) {
+              grid-template-columns: repeat(2, 1fr);
+              gap: u.rem(12);
+            }
+  
+            button {
+              background-color: u.$very-dark-cyan;
+              border: none;
+              color: u.$white;
+              padding: u.rem(6) 0;
+              border-radius: u.rem(6);
+              cursor: pointer;
+
+              @include u.breakpoint-down(xlarge) {
+                padding: u.rem(5) 0;
+              }
+
+              @include u.breakpoint-down(medium) {
+                padding: u.rem(7) 0;
+              }
+
+              &:hover {
+                background-color: u.$light-grayish-cyan;
+                color: u.$very-dark-cyan;
+              }
+            }
+
+            .tipBtn.active {
+              background-color: u.$strong-cyan;
+              color: u.$very-dark-cyan;
+            }
+  
+            input {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    &__right {
+      flex: 1;
+      background-color: u.$very-dark-cyan;
+      border-radius: u.rem(16);
+
+      @include u.breakpoint-down(xlarge) {
+        border-radius: u.rem(12); 
+      }
+      
+      &-container2 {
+        padding: u.rem(36);
+        display: flex;
+        flex-direction: column;  
+        height: 100%;
+        
+        @include u.breakpoint-down(xlarge) {
+          padding: u.rem(28);
+        }
+
+        @include u.breakpoint-down(mediumLarge) {
+          padding: u.rem(24);
+        }
+      }
+
+      &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &:first-child {
+          margin-bottom: u.rem(26);
+
+          @include u.breakpoint-down(xlarge) {
+            margin-bottom: u.rem(20);
+          }
+        }
+      }
+
+      &-left {
+        .p1 {
+          font-size: u.rem(16);
+          color: u.$white;
+
+          @include u.breakpoint-down(xlarge) {
+            font-size: u.rem(12);
+          }
+        }
+
+        .p2 {
+          font-size: u.rem(13);
+          color: u.$grayish-cyan;
+
+          @include u.breakpoint-down(xlarge) {
+            font-size: u.rem(10);
+          }
+        }
+      }
+
+      &-right {
+        .price {
+          font-size: u.rem(48);
+          color: u.$strong-cyan;
+
+          @include u.breakpoint-down(xlarge) {
+            font-size: u.rem(37);
+          }
+        }
+      }
+
+      button {
+        margin-top: auto;
+        border: none;
+        background-color: u.$strong-cyan;
+        color: u.$very-dark-cyan;
+        padding: u.rem(6) 0;
+        cursor: pointer;
+        border-radius: u.rem(4);
+
+        @include u.breakpoint-down(xlarge) {
+          padding: u.rem(5) 0;
+        }
+        
+        @include u.breakpoint-down(mediumLarge) {
+          margin-top: u.rem(14);
+        }
+
+        &:hover {
+          background-color: u.$light-grayish-cyan;
+        }
+
+        &.inactive {
+          opacity: 0.5;
+          cursor: default;
+
+          &:hover {
+            background-color: u.$strong-cyan;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: auto;
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+}

@@ -11,13 +11,23 @@
 }
 
 html {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
   font-size: 100%;
   box-sizing: border-box;
-  color-scheme: dark light;
+  // color-scheme: dark light;
 }
 
 body {
   min-height: 100vh;
+  font-size: u.rem(24);
+  background-color: u.$light-grayish-cyan;
+  display: flex;
+  flex-direction: column;
+
+  @include u.breakpoint-down(xlarge) {
+    font-size: u.rem(18);     
+  }
 }
 
 ul {
@@ -41,6 +51,22 @@ table {
 
 td, th {
   padding: 0;
+}
+
+input {
+  color: u.$very-dark-cyan;
+  border: u.rem(1) solid u.$very-light-grayish-cyan;
+  background-color: u.$very-light-grayish-cyan;
+  border-radius: u.rem(8);
+
+  &::placeholder {
+    color: u.$grayish-cyan;
+  }
+
+  &:focus {
+    outline: none;
+    border: u.rem(1) solid u.$strong-cyan;
+  }
 }
 
 .sr-only {
